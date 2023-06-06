@@ -13,3 +13,15 @@ where subject_name like 'Computer%';
 select count(*) from students s 
 cross join parents p
 where s.gender = 'Male' and s.age = 14;
+
+select * from students s 
+where s.last_name like '%y'; 
+
+--Subquery
+select * from staff s 
+-- Write a query where you have to find the name of the people in staff table whose age is more than the average age of all the members.
+-- find the average age and then filter the members based on the above result.
+--select avg(age) from staff s; -- 40.5652173913043478
+select * from staff s 
+where age >= (select avg(age) from staff s);
+
