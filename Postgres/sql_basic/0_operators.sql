@@ -25,3 +25,24 @@ select * from staff s
 select * from staff s 
 where age >= (select avg(age) from staff s);
 
+-- Question 174 leetcode
+-- https://leetcode.com/problems/combine-two-tables/
+-- # Write your MySQL query statement below
+Select p.firstName, p.lastName, a.city, a.state
+From Person p left join Address a ON p.personID = a.personID;
+
+
+--181 leetcode
+--https://leetcode.com/problems/employees-earning-more-than-their-managers/submissions/
+-- # Write your MySQL query statement below
+select e.name as Employee
+from Employee e, Employee m
+where e.managerId = m.id And e.salary > m.salary;
+
+--182 leetcode
+-- https://leetcode.com/problems/duplicate-emails/
+--# Write your MySQL query statement below
+select distinct p.email
+from Person p, Person e
+where p.email = e.email and p.id <> e.id;
+
