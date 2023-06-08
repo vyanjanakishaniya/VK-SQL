@@ -25,6 +25,19 @@ select * from staff s
 select * from staff s 
 where age >= (select avg(age) from staff s);
 
+--Scalar subquery
+
+select * from staff s 
+join (select avg(age) a from staff) avg_age
+on s.age > avg_age.a;
+
+--Multiple-row subquery
+
+-- Find the persons who has highest age in each department
+select staff_type, max(age) from staff s
+group by staff_type;
+
+
 -- Question 174 leetcode
 -- https://leetcode.com/problems/combine-two-tables/
 -- # Write your MySQL query statement below
