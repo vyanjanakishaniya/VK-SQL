@@ -52,6 +52,19 @@ select e.name as Employee
 from Employee e, Employee m
 where e.managerId = m.id And e.salary > m.salary;
 
+--Query optimization
+
+SELECT e.name AS Employee
+FROM Employee e
+JOIN Employee m ON e.managerId = m.id AND e.salary > m.salary;
+
+SELECT e.name AS Employee
+FROM Employee e
+INNER JOIN (
+  SELECT id, salary
+  FROM Employee
+) m ON e.managerId = m.id AND e.salary > m.salary;
+
 --182 leetcode
 -- https://leetcode.com/problems/duplicate-emails/
 --# Write your MySQL query statement below
