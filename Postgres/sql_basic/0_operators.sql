@@ -72,3 +72,10 @@ select distinct p.email
 from Person p, Person e
 where p.email = e.email and p.id <> e.id;
 
+select * from address a
+select * from classes c
+UNION
+select * from parents p;
+
+
+
