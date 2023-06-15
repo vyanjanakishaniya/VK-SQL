@@ -72,10 +72,19 @@ select distinct p.email
 from Person p, Person e
 where p.email = e.email and p.id <> e.id;
 
-select * from address a
+select * from address a;
 select * from classes c
 UNION
 select * from parents p;
 
+select * from staff_salary ss;
+
+-- Fetch all the staff id whose salary is more than the avg salary using WITH clause
+
+with average_salary (avg_sal) as 
+(select avg(salary) from staff_salary ss)
+
+select * from staff_salary ss, average_salary av 
+where ss.salary > av.avg_sal;
 
 
