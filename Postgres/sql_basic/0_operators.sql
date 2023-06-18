@@ -87,4 +87,16 @@ with average_salary (avg_sal) as
 select * from staff_salary ss, average_salary av 
 where ss.salary > av.avg_sal;
 
+create or replace view adrs as 
+select * from address a 
+where a.state = 'Texas';
+
+select * from adrs;
+
+create role vini
+login
+password 'vini';
+
+
+
 
