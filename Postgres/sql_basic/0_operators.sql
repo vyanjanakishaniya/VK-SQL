@@ -97,6 +97,14 @@ create role vini
 login
 password 'vini';
 
+--Q. Display numbers from 1 to 10 without using any in built function.
+
+with recursive numbers as
+ ( select 1 as n
+   union
+   select n +1
+   from numbers where n < 10 )
+select * from numbers; 
 
 
 
