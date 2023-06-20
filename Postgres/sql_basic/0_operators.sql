@@ -108,5 +108,16 @@ select * from numbers;
 
 select current_date - 1 as previous_date;
 
+create or replace procedure pr_name (p_name varchar, p_age int)
+language plpgsql
+as $$
+declare variable
+begin 
+	procedure body
+end; 
+$$
+end
+
+
 
 
