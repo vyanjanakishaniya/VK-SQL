@@ -106,5 +106,7 @@ with recursive numbers as
    from numbers where n < 10 )
 select * from numbers; 
 
+select current_date - 1 as previous_date;
+
 
 
