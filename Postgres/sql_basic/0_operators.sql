@@ -93,7 +93,7 @@ where a.state = 'Texas';
 
 select * from adrs;
 
-create role vini
+create role sanjana
 login
 password 'vini';
 
@@ -117,6 +117,8 @@ begin
 end; 
 $$
 end
+
+
 
 
 
