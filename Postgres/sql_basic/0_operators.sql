@@ -7,7 +7,7 @@ where gender = 'F' and age >= 55;
 
 -- Logical operator
 select * from subjects s  
-where subject_name like 'Computer%';
+where subject_name like 'Comp%';
 
 --Cross join
 select count(*) from students s 
