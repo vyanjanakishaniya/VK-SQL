@@ -12,7 +12,7 @@ where subject_name like 'Comp%';
 --Cross join
 select count(*) from students s 
 cross join parents p
-where s.gender = 'Male' and s.age = 14;
+where s.gender = 'Male' and s.age >= 14;
 
 select * from students s 
 where s.last_name like '%y'; 
